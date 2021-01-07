@@ -1,3 +1,9 @@
+<% if logged_in? %>
+  <p>ログインユーザー：<%= current_user.name %></p>
+<% else %>
+  <p>ログインしてません</p> <!--仮置き-->
+<% end %>
+
 <h1>タスク一覧</h1>
 
 <table class="table table-striped">
