@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     
     if @user.save
       flash[:success] = 'ユーザーを登録しました'
-      redirect_to root_url # tasks#index に遷移させたい
+      redirect_to root_url
     else
       flash.now[:danger] = 'ユーザーの登録に失敗しました'
       render :new
