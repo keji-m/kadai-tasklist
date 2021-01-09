@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     flash[:success] = 'ログアウトしました'
-    render :new # loginページへ遷移
+    redirect_back(fallback_location: login_path) 
   end
   
   private
